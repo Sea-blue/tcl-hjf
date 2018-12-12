@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+#small-img-box {
+  background: #f2f2f2; }
+  #small-img-box .small-img {
+    width: 1228px;
+    margin: 0 auto;
+    margin: 34px auto 49px; }
+    #small-img-box .small-img #small-img-ul {
+      height: 220px;
+      margin-bottom: 49px; }
+      #small-img-box .small-img #small-img-ul .small-img-li {
+        float: left;
+        height: 100%;
+        margin-right: 13px;
+        overflow: hidden;
+        background-size: 100% auto;
+        background-repeat: no-repeat; }
+
+/*# sourceMappingURL=small-img.css.map */

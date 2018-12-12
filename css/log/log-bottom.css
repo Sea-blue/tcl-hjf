@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+#log-bottom {
+  margin-top: 42px;
+  width: 1226px;
+  margin: 42px auto 60px; }
+  #log-bottom .log-bottom-p1 {
+    width: 500px;
+    margin: 0 auto; }
+    #log-bottom .log-bottom-p1 a {
+      display: inline-block;
+      width: 92px;
+      text-align: center;
+      border-right: 1px solid #ccc;
+      line-height: 12px;
+      font-size: 12px;
+      color: #666; }
+    #log-bottom .log-bottom-p1 .log-bottom-a {
+      display: inline-block;
+      width: 92px;
+      text-align: center;
+      border-right: none;
+      line-height: 12px;
+      font-size: 12px;
+      color: #666; }
+  #log-bottom .log-bottom-p2 {
+    font-size: 12px;
+    color: #999;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 13px; }
+    #log-bottom .log-bottom-p2 a {
+      color: #333; }
+
+/*# sourceMappingURL=log-bottom.css.map */

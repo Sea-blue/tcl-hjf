@@ -1,0 +1,30 @@
+ @charset "utf-8";
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ img {
+     display: block;
+ }
+ 
+#header-box{
+    width: 1226px;
+    margin: 0 auto;
+    .header{
+            padding: 20px 0 20px;
+    height: 45px;
+        margin-left: 20px;
+        a{
+                float: left;
+        }
+        span{
+            float: left;
+            color: #666;
+            font-size: 32px;
+            line-height: 45px;
+            margin-left: 30px;
+            font-weight: lighter;
+        }
+    }
+}

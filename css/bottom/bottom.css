@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+#bottom01-box {
+  width: 100%;
+  height: auto;
+  padding: 40px 0 41px;
+  background-color: #f0f0f0; }
+  #bottom01-box #bottom01 {
+    overflow: hidden;
+    position: relative;
+    width: 1226px;
+    margin: 0 auto; }
+    #bottom01-box #bottom01 dl {
+      float: left;
+      margin-right: 112px; }
+      #bottom01-box #bottom01 dl dt {
+        font-size: 14px;
+        line-height: 14px;
+        padding-bottom: 20px;
+        color: #333;
+        font-weight: 700; }
+      #bottom01-box #bottom01 dl dd {
+        display: block;
+        line-height: 12px; }
+        #bottom01-box #bottom01 dl dd a {
+          color: #999;
+          outline: 0;
+          display: inline-block;
+          padding-bottom: 12px;
+          font-size: 12px; }
+    #bottom01-box #bottom01 .bottom01-dl {
+      width: 172px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      margin-right: 0; }
+      #bottom01-box #bottom01 .bottom01-dl .bottom01-dl-p1 {
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 2px;
+        text-align: center;
+        letter-spacing: 2px;
+        color: red; }
+      #bottom01-box #bottom01 .bottom01-dl .bottom01-dl-p2 {
+        font-size: 12px;
+        color: #999;
+        line-height: 18px;
+        text-align: center; }
+      #bottom01-box #bottom01 .bottom01-dl a {
+        width: 160px;
+        height: 36px;
+        color: red;
+        font-size: 12px;
+        padding: 2px;
+        margin-top: 20px;
+        border: 1px solid red;
+        display: inline-block;
+        line-height: 32px; }
+        #bottom01-box #bottom01 .bottom01-dl a i {
+          color: red;
+          font-size: 22px;
+          font-family: iconfont-tcl;
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 8px;
+          line-height: 30px;
+          font-style: normal; }
+      #bottom01-box #bottom01 .bottom01-dl a:hover {
+        background: red;
+        color: white;
+        text-decoration: underline; }
+        #bottom01-box #bottom01 .bottom01-dl a:hover i {
+          color: white; }
+
+#bottom02-box {
+  width: 100%;
+  padding: 25px 0;
+  font-size: 12px;
+  color: #999;
+  background-color: #e3e3e3;
+  min-width: 1226px; }
+  #bottom02-box #bottom02_top {
+    width: 1226px;
+    margin: 0 auto;
+    line-height: 22px;
+    position: relative; }
+    #bottom02-box #bottom02_top p {
+      line-height: 22px;
+      font-size: 12px;
+      color: #999; }
+      #bottom02-box #bottom02_top p a {
+        margin-left: 10px;
+        color: #999; }
+    #bottom02-box #bottom02_top .bottom02_top-p1 a {
+      padding: 0 15px;
+      color: #666; }
+    #bottom02-box #bottom02_top .bottom02_top_box {
+      line-height: 29px;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      z-index: 10; }
+      #bottom02-box #bottom02_top .bottom02_top_box .bottom02_top_ {
+        margin-left: 10px;
+        vertical-align: top;
+        display: inline-block;
+        height: 29px;
+        position: relative; }
+        #bottom02-box #bottom02_top .bottom02_top_box .bottom02_top_ a {
+          width: auto;
+          padding: 0 12px;
+          display: inline-block;
+          bottom: 29px;
+          cursor: pointer;
+          -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+          color: #555;
+          outline: 0; }
+  #bottom02-box #bottom02_bottom {
+    width: 1226px;
+    margin: 0 auto;
+    line-height: 22px;
+    position: relative;
+    text-align: center; }
+    #bottom02-box #bottom02_bottom div {
+      text-align: center;
+      display: inline-block; }
+      #bottom02-box #bottom02_bottom div img {
+        width: 88px;
+        height: 32px;
+        margin: 0 2px; }
+
+#gotop {
+  position: fixed;
+  right: 30px;
+  bottom: 150px;
+  z-index: 20000;
+  width: 46px;
+  height: 46px; }
+  #gotop a {
+    width: 46px;
+    height: 46px;
+    display: block;
+    cursor: pointer;
+    vertical-align: top;
+    line-height: 46px;
+    text-align: center;
+    transition: all .2s;
+    border: 1px solid #ededed;
+    background-color: #FFF;
+    color: #979797;
+    font-size: 22px;
+    position: relative;
+    overflow: hidden; }
+    #gotop a img {
+      width: 30px;
+      height: 30px;
+      display: block;
+      transition: all .2s;
+      color: #979797;
+      font-size: 22px;
+      position: relative;
+      left: 9px;
+      top: 8px;
+      overflow: hidden; }
+
+/*# sourceMappingURL=bottom.css.map */

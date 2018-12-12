@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TCL用户中心-账号密码登录</title>
+<!--标题图标-->
+<link rel="icon" href="../img/tcl.ico" type="image/x-icon">
+<!--头部区域css-->
+<link rel="stylesheet" href="../css/log/log-header.css" />
+<!--中间区域css-->
+<link rel="stylesheet" href="../css/log/logon/logon.css" />
+<!--底部区域css-->
+<link rel="stylesheet" href="../css/log/log-bottom.css" />
+	</head>
+	<body>
+<!--头部区域-->
+<div id="header-box">
+	<p class="header">
+		<a href="/proxy/home/index">
+			<img src="../img/log/logo.png">
+		</a>
+		<span>TCL账号登录</span>
+	</p>	
+</div>
+
+<!--中间图-->
+<div id="logon-box">
+	<div id="logon">
+		<div id="logon_box">
+			
+			<div class="logon_box-top">
+	            <h3>推荐第三方登录</h3>
+	            <p class="logon_box-ico">
+	                <a class="logon_box-ico01" href="/loginthird/login?type=3&amp;from="></a>
+	                <a class="logon_box-ico02" href="/loginthird/login?type=2&amp;from="></a>
+	                <a class="logon_box-ico03" href="/loginthird/login?type=1&amp;from="></a>
+	            </p>
+        	</div>
+        	
+        	<p class="logon_box-p">账号密码登录</p>
+        	
+        	<div class="logon_box-id01">
+	            <span class="ikyuser pa iky01"></span>
+	            <input type="text" class="logon_box-id-inp01" placeholder="输入手机号码 ">
+	            <span class="logon_box-id-sp01"></span>
+        	</div>
+        
+        <div class="logon_box-id02">
+            <span class="ikyuser pa iky02"></span>
+            <input type="password" class="logon_box-id-inp02" placeholder="登录密码">
+            <span class="logon_box-id-sp02">请输入登录密码！</span>
+        </div>
+             
+        <p class="logon_box-btn">
+        	<a class="logon_box-btn-a" href="javascript:;">登录</a>
+        </p>
+        
+        <p class="logon_box--methds">
+        	<a id="logon_box--methds-a1" href="/proxy/quick/login?from=http://www.tcl.com/">短信验证登录</a>
+        	<a id="logon_box--methds-a2" href="tcl-login.html">注册TCL账号</a>
+        	<a class="logon_box--methds-a3" href="/proxy/find/password/nologin?from=http://www.tcl.com/">找回密码</a>
+        </p>
+        	
+		</div>
+	</div>
+</div>
+	
+	
+<!--底部区域-->
+<div id="log-bottom">
+	<p class="log-bottom-p1">
+		<a href="http://www.tcl.com/group/companyInfo/index">关于TCL</a> 
+		<a href="http://www.tcl.com/group/societyDuty/index">社会责任</a> 
+		<a href="http://www.tcl.com/group/investors/index">投资者关系</a> 
+		<a href="http://www.tcl.com/group/news/index">新闻中心</a> 
+				<a href="http://www.tcl.com/dealer/toLogin" class="log-bottom-a">经销商之家</a>
+	</p>
+	<p class="log-bottom-p2">
+		 ©2010-2016 TCL CORPORATION All Rights Reserved.  
+		 <a href="http://www.tcl.com:80/frontshow/content/getContent/bf9d8fe2ec834c178f7bd2ba2272adfa">使用条款</a>  
+		 TCL集团股份有限公司版权所有 粤ICP备05040863号
+	</p>
+</div>	
+
+
+<script src="../js/jquery.js"></script>
+<script src="../js/Cookie.js"></script>
+<script>
+var $flagZhang = null;
+$( ".logon_box-id-inp01" ).blur(function(){
+	var $str = $( ".logon_box-id-inp01" ).val();
+	var $reg = /^1[3578]\d{9}$/;
+	if($str){
+		
+		if( $reg.test($str) ){
+			$flagZhang = true;
+			$( ".logon_box-id-sp01" ).html("账号格式正确");  
+		}else{
+			$flagZhang = false;
+			$( ".logon_box-id-sp01" ).html("请填写正确号码");
+		}
+	}else{
+		$flagZhang = false;
+		$( ".logon_box-id-sp01" ).html("请填写账号");
+	}
+})
+
+
+var $flagMiMa = null;
+$( ".logon_box-id-inp02" ).blur(function(){
+	var $str = $( ".logon_box-id-inp02" ).val();
+	var $rew = /(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}/;
+	if($str){
+		
+		if( $rew.test($str) ){
+			$flagMiMa = true;
+			$( ".logon_box-id-sp02" ).html("密码格式正确");  
+		}else{
+			$flagMiMa = false;
+			$( ".logon_box-id-sp02" ).html("请填写正确密码");
+		}
+	}else{
+		$flagMiMa = false;
+		$( ".logon_box-id-sp02" ).html("请填写密码");
+	}
+})
+
+
+
+$(".logon_box-btn-a").click(function(){
+	
+	if(  $flagZhang && $flagMiMa ){			
+		var one  = $( ".logon_box-id-inp01" ).val();//账号
+		var two  = $( ".logon_box-id-inp02" ).val();//密码
+		
+		var mima = getCookie(one);
+//		根据账号获取密码		
+		if(mima === two)			
+			alert("登录成功")
+			window.location.href = "tcl.html";
+		}else{
+			alert("账号密码错误！")
+		}
+		
+	}else{
+		alert("请输入完整账号密码！")
+	}
+})
+</script>
+	
+	</body>
+</html>

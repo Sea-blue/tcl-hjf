@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TCL用户中心-注册TCL账号</title>
+<!--标题图标-->
+<link rel="icon" href="../img/tcl.ico" type="image/x-icon">
+<!--头部区域css-->
+<link rel="stylesheet" href="../css/log/log-header.css" />
+<!--中间区域css-->
+<link rel="stylesheet" href="../css/log/login/login.css" />
+<!--底部区域css-->
+<link rel="stylesheet" href="../css/log/log-bottom.css" />
+	</head>
+	<body>
+<!--头部区域-->
+<div id="header-box">
+	<p class="header">
+		<a href="/proxy/home/index">
+			<img src="../img/log/logo.png">
+		</a>
+		<span>TCL账号登录</span>
+	</p>	
+</div>
+<!--中间区域-->
+<div id="login-box">
+	<div id="login">
+		
+		<div id="login_01" style=" display: block;">
+			<p class="login_p">注册TCL账号</p>
+			<!--手机号码-->
+			<div class="login_box">
+			    <span class="login_box-phone-sp1"></span>
+			    <input type="text" class="login_box-phone-inp" placeholder="请输入手机号码" >
+			    <span class="login_box-phone-sp2"></span>
+			</div>
+			<!--图片验证-->
+			<div class="login_box">
+			    <span class="login_box-img-sp1"></span>
+			    <input type="text" class="login_box-img-inp" placeholder="输入验证码" maxlength="16" >
+			    <span class="login_box-img-sp2">
+			    	<img class="login_box-img-01" src="../img/log/loginimg01.jpg" id="imgcode">
+			    </span>
+			    <span class="login_box-img-sp3"></span>
+			</div>
+			 <!--短信验证-->
+			  <div class="login_box">
+			    <span class="login_box-note-sp1"></span>
+			    <input type="text" class="login_box-note-inp" placeholder="短信验证码" maxlength="6">
+			    <span class="login_box-note-sp2">获取验证码</span>
+			    <span class="login_box-note-sp3"></span>
+			  </div>
+			  
+			  <div class="login_box-confirm">
+			    <input type="checkbox" class="login_box-confirm-inp">
+			    <span class="login_box-confirm-sp">已阅读并同意用户服务条款和隐私政策</span>
+			  </div>
+			  
+  			<p class="login--box-btn">
+  				<input type="button" class="login--box-but" value="注册"/>
+  
+  			</p>
+  			
+ 			<p class="login--box-elect" id="o-methds">
+   			<a class="login--box-elect-a1" href="tcl-logon.html">已有账号直接登录</a>
+   			<a class="login--box-elect-a2" href="/proxy/login" >推荐第三方登录</a>
+  			</p>
+		</div>
+		
+		<div id="login_02" style=" display: none ">
+		<div class="login_02_box" style="">
+
+		<p class="login_02_p1">您注册的账号为：<span class="regPhone"></span></p>
+		<p class="login_02_p2">请设置密码：</p>
+
+		<div class="login_02_m1">
+			<span class="login_02_m1_sp1"></span>
+			<input type="password" class="login_02_m1_inp" placeholder="设置密码">
+			<span class="login_02_m1_sp2"></span>
+		</div>
+
+		<div class="login_02_m2">
+			<span class="login_02_m2_sp1"></span>
+			<input type="password" class="login_02_m2_inp" placeholder="确认密码">
+			<span class="login_02_m2_sp2"></span>
+		</div>
+
+		<p class="login_02_p3">密码由8-16位英文字母、数字或者符号组成</p>
+
+		<p class="login_02_p4"><span class="J-LogSubmit">确认提交</span></p>
+
+		</div>
+		</div>
+
+</div>
+</div>
+<!--底部区域-->
+<div id="log-bottom">
+	<p class="log-bottom-p1">
+		<a href="http://www.tcl.com/group/companyInfo/index">关于TCL</a> 
+		<a href="http://www.tcl.com/group/societyDuty/index">社会责任</a> 
+		<a href="http://www.tcl.com/group/investors/index">投资者关系</a> 
+		<a href="http://www.tcl.com/group/news/index">新闻中心</a> 
+		<a href="http://www.tcl.com/dealer/toLogin" class="log-bottom-a">经销商之家</a>
+	</p>
+	<p class="log-bottom-p2">
+		 ©2010-2016 TCL CORPORATION All Rights Reserved.  
+		 <a href="http://www.tcl.com:80/frontshow/content/getContent/bf9d8fe2ec834c178f7bd2ba2272adfa">使用条款</a>  
+		 TCL集团股份有限公司版权所有 粤ICP备05040863号
+	</p>
+</div>
+
+<!--JQ引入-->
+<script src="../js/jquery.js"></script>
+<!--控制JS引入-->T
+<script src="../js/public.js"></script>
+
+<script src="../js/Cookie.js"></script>
+
+<script>
+console.log( $(".login--box-but").val() )
+
+//失去焦点
+//手机号码验证
+var $flagTel = null;
+$( ".login_box-phone-inp" ).blur(function(){
+	var $str = $( ".login_box-phone-inp" ).val();
+	var $reg = /^1[3578]\d{9}$/;
+	if( $str ){
+		if( $reg.test($str) ){
+			$flagTel = true;
+			$( ".login_box-phone-sp2" ).html("手机号正确");  
+		}else{
+			$flagTel = false;
+			$( ".login_box-phone-sp2" ).html("请输入合法的手机号码！");
+		}
+	}else{
+		$( ".login_box-phone-sp2" ).html("手机号码不能为空");
+	}
+});
+
+
+var $flagYzm = null;
+$( ".login_box-img-inp" ).blur(function(){
+	var $str = $( ".login_box-img-inp" ).val();
+	if( $str == 7761 ){
+		$flagYzm = true;
+		$( ".login_box-img-sp3" ).html("验证码正确");  
+	}else{
+		$flagYzm = false;
+		$( ".login_box-img-sp3" ).html("请填写正确验证码");
+	}
+})
+
+//
+var $flagTyz = null;
+//4位随机验证码
+$( ".login_box-note-sp2" ).click(function(){
+	var $stryzm = yzm();
+	$(".login_box-note-sp2").html($stryzm);
+})
+
+$(".login_box-note-inp").blur(function(){
+	if($(".login_box-note-sp2").html() == $(".login_box-note-inp").val()){
+		$flagTyz = true;
+		$( ".login_box-note-sp3" ).html("验证码正确");
+	}else{
+		$flagTyz = false;
+		$( ".login_box-note-sp3" ).html("验证码错误");
+	}
+})
+
+$(".login--box-but").click(function(){
+	
+	if(  $flagTel && $flagYzm && $flagTyz){	
+		$( "#login_01").css( "display","none" );
+		$( "#login_02").css( "display","block" );
+	}else{
+		alert("请请输入完成")
+	}
+
+})
+
+//密码
+var $flagMima = null;
+$( ".login_02_m1_inp" ).blur(function(){
+	var $stt = $( ".login_02_m1_inp" ).val();
+	var $rew = /(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}/;
+	if( $stt ){
+		if( $rew.test($stt) ){
+			$flagMima = true;
+			$( ".login_02_m1_sp2" ).html("密码格式正确");  
+		}else{
+			$flagMima = false;
+			$( ".login_02_m1_sp2" ).html("密码6到12位之间必须有数字字母");
+		}
+	}else{
+		$( ".login_02_m1_sp2" ).html("密码不能为空");
+	}
+})
+
+var $flagPnd = null;
+$( ".login_02_m2_inp" ).blur(function(){
+	var $st1 = $( ".login_02_m1_inp" ).val();
+	var $st2 = $( ".login_02_m2_inp" ).val();
+	if($st1 === $st2){
+		$flagPnd = true;
+		$( ".login_02_m2_sp2" ).html("密码一致");
+		
+	}else{
+		$flagPnd = false;
+		$( ".login_02_m2_sp2" ).html("密码不一致请重新输入");
+	}
+	
+})
+
+$(".login_02_p4").click(function(){
+	
+	if(  $flagPnd && $flagMima ){			
+		var one  = $( ".login_box-phone-inp" ).val();
+		var key1 = $( ".login_02_m1_inp" ).val() 
+		setCookie2(one , key1 , 300);//账号  
+		alert("注册成功")
+		window.location.href = "tcl-logon.html";
+		
+	}else{
+		alert("请请输入密码")
+	}
+})
+
+</script>
+
+	</body>
+</html>

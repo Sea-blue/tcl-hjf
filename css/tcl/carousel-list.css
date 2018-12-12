@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+#carousel-list-box {
+  position: relative;
+  height: 550px; }
+  #carousel-list-box #list-box {
+    width: 1228px;
+    margin: 0 auto; }
+    #carousel-list-box #list-box #list_ {
+      width: 176px;
+      position: absolute;
+      z-index: 100;
+      height: 550px; }
+      #carousel-list-box #list-box #list_ .list_left {
+        padding-top: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 176px;
+        z-index: 100;
+        height: 510px; }
+        #carousel-list-box #list-box #list_ .list_left li {
+          width: 122px;
+          height: 67px;
+          line-height: 67px;
+          text-align: center;
+          cursor: pointer;
+          padding-left: 32px;
+          padding-right: 22px;
+          opacity: 0.8; }
+          #carousel-list-box #list-box #list_ .list_left li a {
+            color: #fff;
+            float: left;
+            font-size: 14px; }
+          #carousel-list-box #list-box #list_ .list_left li i {
+            font-size: 14px;
+            width: 14px;
+            height: 67px;
+            right: 0;
+            margin: 0 0 0 8px;
+            padding: 0;
+            color: #fff;
+            position: inherit;
+            font-style: normal;
+            float: right; }
+        #carousel-list-box #list-box #list_ .list_left li:hover {
+          background-color: white;
+          opacity: 0.8; }
+          #carousel-list-box #list-box #list_ .list_left li:hover a {
+            color: red; }
+          #carousel-list-box #list-box #list_ .list_left li:hover i {
+            color: red; }
+      #carousel-list-box #list-box #list_ .list_right-box {
+        width: 1055px;
+        position: absolute;
+        top: 0;
+        left: 176px;
+        background-color: #fff;
+        height: 550px;
+        border-top: 1px solid #efe7e7; }
+        #carousel-list-box #list-box #list_ .list_right-box .list_right_ {
+          width: 100%;
+          height: 100%; }
+          #carousel-list-box #list-box #list_ .list_right-box .list_right_ .list_right_ul {
+            margin: 57px 0 0 30px;
+            width: 674px;
+            float: left; }
+            #carousel-list-box #list-box #list_ .list_right-box .list_right_ .list_right_ul li {
+              margin: 0 0 38px 23px;
+              float: left; }
+              #carousel-list-box #list-box #list_ .list_right-box .list_right_ .list_right_ul li a {
+                display: block;
+                color: #555;
+                outline: 0; }
+                #carousel-list-box #list-box #list_ .list_right-box .list_right_ .list_right_ul li a img {
+                  width: 120px;
+                  height: 120px;
+                  float: left; }
+                #carousel-list-box #list-box #list_ .list_right-box .list_right_ .list_right_ul li a div {
+                  width: 168px;
+                  display: inline-block;
+                  font-size: 14px;
+                  margin-top: 15px;
+                  margin-left: 20px;
+                  vertical-align: middle;
+                  float: left; }
+                  #carousel-list-box #list-box #list_ .list_right-box .list_right_ .list_right_ul li a div p {
+                    font-size: 14px; }
+                  #carousel-list-box #list-box #list_ .list_right-box .list_right_ .list_right_ul li a div button {
+                    width: 98px;
+                    height: 28px;
+                    border: 1px solid #f30;
+                    text-align: center;
+                    line-height: 28px;
+                    color: #f30;
+                    background: 0 0;
+                    cursor: pointer;
+                    margin-top: 18px; }
+  #carousel-list-box #carousel-box {
+    overflow: hidden; }
+    #carousel-list-box #carousel-box .carousel_ {
+      position: absolute;
+      width: 100%;
+      overflow: hidden; }
+      #carousel-list-box #carousel-box .carousel_ a {
+        height: 550px;
+        width: 100%;
+        display: block;
+        overflow: hidden; }
+        #carousel-list-box #carousel-box .carousel_ a img {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          max-width: 1920px;
+          width: auto; }
+    #carousel-list-box #carousel-box .carousel_show {
+      z-index: 5; }
+    #carousel-list-box #carousel-box .carousel_hide {
+      z-index: 4; }
+    #carousel-list-box #carousel-box #carousel_contorol1_box .carousel_contorol1 {
+      z-index: 10;
+      text-align: right;
+      position: absolute;
+      bottom: 22px;
+      pointer-events: none;
+      width: 1228px;
+      left: 50%;
+      margin-left: -614px;
+      cursor: pointer; }
+      #carousel-list-box #carousel-box #carousel_contorol1_box .carousel_contorol1 span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 5px;
+        background-color: #fff;
+        cursor: pointer; }
+      #carousel-list-box #carousel-box #carousel_contorol1_box .carousel_contorol1 .current {
+        background-color: #db192a; }
+    #carousel-list-box #carousel-box #carousel_contorol2_box {
+      z-index: 10;
+      width: 1050px;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      margin-left: -437px;
+      top: 50%;
+      margin-top: -35px; }
+      #carousel-list-box #carousel-box #carousel_contorol2_box a {
+        display: block;
+        color: #fff;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        line-height: 70px; }
+        #carousel-list-box #carousel-box #carousel_contorol2_box a img {
+          width: 50px;
+          height: 50px; }
+      #carousel-list-box #carousel-box #carousel_contorol2_box .carousel_contorol2-a1 {
+        float: left;
+        left: 20px;
+        margin-left: 20px; }
+      #carousel-list-box #carousel-box #carousel_contorol2_box .carousel_contorol2-a2 {
+        float: right;
+        right: 35px;
+        margin-right: 35px; }
+
+/*# sourceMappingURL=carousel-list.css.map */

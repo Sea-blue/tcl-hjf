@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+body {
+  background: white; }
+
+#shop-center-box {
+  border-top: 1px solid #ddd;
+  padding: 112px 0; }
+  #shop-center-box #shop-center {
+    margin: 0 auto;
+    width: 980px;
+    min-height: 240px; }
+    #shop-center-box #shop-center img {
+      float: left; }
+    #shop-center-box #shop-center .shop-center_right {
+      float: right;
+      margin-right: 90px;
+      margin-top: 113px; }
+      #shop-center-box #shop-center .shop-center_right p {
+        font-family: "Microsoft YaHei", "PingFang SC";
+        color: #666;
+        font-size: 100%; }
+      #shop-center-box #shop-center .shop-center_right .shop-center_right-a {
+        border: 1px solid red;
+        color: red;
+        display: block;
+        font-size: 14px;
+        height: 35px;
+        line-height: 35px;
+        margin-top: 16px;
+        text-align: center;
+        width: 150px; }
+      #shop-center-box #shop-center .shop-center_right .shop-center_right-a:hover {
+        background: red;
+        color: white; }
+
+/*# sourceMappingURL=shop.css.map */
